@@ -708,7 +708,7 @@ read_options_and_command_name(int argc, char **argv)
   int opt_f = FALSE;
   int remaining = -1; /* remaining number of arguments on command line */
   int longindex = -1; /* index of current option in longopts[], set by getopt_long */
-  
+  char* rl_basic_quote_characters;
   
   full_program_name = mysavestring(argv[0]);
   program_name = mybasename(full_program_name);	/* normally "rlwrap"; needed by myerror() */
